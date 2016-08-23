@@ -1,0 +1,47 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="helloworld.Main" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+		<Table headerText="Table 1" id="id1" items="{/myArray}" width="500px" align="center">
+						<columns>
+							<Column hAlign="Center"><Text text="ID_1"/></Column>
+							<Column hAlign="Center"><Text text="ID_2"/></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{pname}"/>
+									<Text text="{sname}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					
+						<Table headerText="Table 2" id="id2" items="{/myArray2}" width="500px">
+						<columns>
+							<Column hAlign="Center"><Text text="ID_1"/></Column>
+							<Column hAlign="Center"><Text text="ID_2"/></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{pname}"/>
+									<Text text="{sname}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+	<Button type="Accept"
+						text="Accept"
+						press="onPress"
+						width="100px"
+						icon="sap-icon://download-from-cloud"
+						ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Button>
+				 <Button text="Reject" press="onPressReject" width="100px" type="Reject" icon="sap-icon://employee-rejections" tooltip="Reject"/>
+		</content>
+	</Page>
+</core:View>
